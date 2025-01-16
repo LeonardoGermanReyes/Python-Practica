@@ -40,3 +40,32 @@ def division():
             print(f"El Resultado de la Division es: {num1 / num2}")
     except ValueError:
         print("Error Por Favor Introduce Valores Numericos que sean Validos")
+
+def factorial():
+    try:
+        num = int(input("Introduce un Numero Entero: "))
+        if num < 0:
+            print("El Factorial no esta Definido para Numeros Negativos")
+        else:
+            print(f"El Factorial de {num} es: {math.factorial(num)}")
+    except ValueError:
+        print("Error Por Favor Introduce un Numero Entero Valido")
+
+def tablas_multiplicar():
+    try:
+        num = int(input("Introduce un Numero para la Tabla de Multiplicar (del 1 al 10): "))
+        if 1 <= num <= 10:
+            for i in range(1, 11):
+                print(f"{num} x {i} = {num * i}")
+        else:
+            print("Error Por Favor Introduce un Numero entre 1 y 10")
+    except ValueError:
+        print("Error has Introducido un Numero no Valido")
+
+def cuadrado_cubo():
+    try:
+        num = float(input("Introduce un Numero: "))
+        print(f"El Cuadrado de {num} es: {num ** 2}")
+        print(f"El Cubo de {num} es: {num ** 3}")
+    except ValueError:
+        print("Error Por Favor Introduce un Numero Valido")
